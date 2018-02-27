@@ -12,7 +12,7 @@
         matInput
         placeholder="Your Email"
         ngModel
-        name="email"
+        name="signupEmail"
         email
         required
         #signupFormEmail="ngModel"
@@ -27,7 +27,7 @@
         matInput
         placeholder="Your Password"
         ngModel
-        name="password"
+        name="signupPassword"
         minlength="6"
         required
         #signupFormPassword="ngModel"
@@ -46,6 +46,14 @@
       <mat-datepicker-toggle matSuffix [for]="signupBirthdatePicker"></mat-datepicker-toggle>
       <mat-datepicker #signupBirthdatePicker></mat-datepicker>
     </mat-form-field>
+
+    <mat-checkbox
+      name="signupAgree"
+      ngModel
+      required
+    >
+      Agree to Terms and Conditions
+    </mat-checkbox>
 
     <button type="submit" mat-raised-button color="primary">Submit</button>
 
