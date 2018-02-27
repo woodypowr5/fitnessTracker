@@ -35,6 +35,18 @@
       <mat-hint *ngIf="signupForm.value.password?.length < 6">Should be at least 6 characters long</mat-hint>
     </mat-form-field>
 
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Date of Birth"
+        [matDatepicker]="signupBirthdatePicker"
+        [max]="maxDate"
+      >
+      <mat-datepicker-toggle matSuffix [for]="signupBirthdatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #signupBirthdatePicker></mat-datepicker>
+    </mat-form-field>
+
     <button type="submit" mat-raised-button color="primary">Submit</button>
 
   </form>
