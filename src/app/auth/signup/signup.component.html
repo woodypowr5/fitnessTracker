@@ -2,6 +2,7 @@
   <form
     fxLayout="column"
     fxLayoutAlign="center center"
+    fxLayoutGap="15px"
     #signupForm="ngForm"
     (ngSubmit)="onSubmit(signupForm)"
   >
@@ -12,7 +13,7 @@
         matInput
         placeholder="Your Email"
         ngModel
-        name="signupEmail"
+        name="email"
         email
         required
         #signupFormEmail="ngModel"
@@ -27,7 +28,7 @@
         matInput
         placeholder="Your Password"
         ngModel
-        name="signupPassword"
+        name="password"
         minlength="6"
         required
         #signupFormPassword="ngModel"
@@ -40,6 +41,7 @@
         matInput
         type="text"
         placeholder="Date of Birth"
+        name="birthdate"
         [matDatepicker]="signupBirthdatePicker"
         [max]="maxDate"
       >
@@ -48,15 +50,21 @@
     </mat-form-field>
 
     <mat-checkbox
-      name="signupAgree"
+      name="acceptTerms"
       ngModel
       required
+      color="primary"
     >
       Agree to Terms and Conditions
     </mat-checkbox>
 
-    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="signupForm.invalid"
+    >Submit</button>
 
   </form>
 </section>
-s
+
