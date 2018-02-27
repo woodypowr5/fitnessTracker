@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form){
-    console.log(form);
+
   }
 
 }
