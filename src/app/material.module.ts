@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {
   MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatDatepickerModule, MatNativeDateModule,
-  MatCheckboxModule, MatSidenavModule, MatToolbarModule, MatToolbarModule, MatListModule
+  MatCheckboxModule, MatSidenavModule, MatToolbarModule, MatToolbarModule, MatListModule, MatTabsModule
 } from '@angular/material';
 // import {MatMomentDateModule} from '@angular/material-moment-adapter';
 
@@ -16,7 +16,8 @@ import {
     MatCheckboxModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule
   ],
   exports: [
     MatButtonModule,
@@ -28,7 +29,8 @@ import {
     MatCheckboxModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule {
