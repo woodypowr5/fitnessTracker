@@ -14,10 +14,12 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
 import { PastTrainingComponent } from './training/past-training/past-training.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { StopTrainingComponent } from './training/current-training/stop-training/stop-training.component';
+
+import { AuthService } from './auth/auth.service';
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
     AppRoutingModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent] // not instantiated vis template or by routing
 })
